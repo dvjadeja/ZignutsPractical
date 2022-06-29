@@ -200,3 +200,11 @@ body {
   font-weight: 700;
   font-size: 0.9rem;
 }
+
+.login-btn {
+  transition: all ease 300ms;
+
+  &:hover{
+    transform: scale(1.4);
+  }
+}

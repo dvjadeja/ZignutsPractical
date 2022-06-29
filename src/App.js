@@ -1,10 +1,5 @@
 import "./App.scss";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import ErrorPage from "./Pages/ErrorPage";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./Pages/Login";
@@ -17,22 +12,22 @@ function App() {
   return (
     <>
       {user ? (
-        <Router>
+        <BrowserRouter>
           <ToastContainer />
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="*" element={<Navigate replace to='/' />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
-        </Router>
+        </BrowserRouter>
       ) : (
-        <Router>
+        <BrowserRouter>
           <ToastContainer />
           <Routes>
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/" element={<Navigate replace to="/login" />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </Router>
+        </BrowserRouter>
       )}
     </>
   );
