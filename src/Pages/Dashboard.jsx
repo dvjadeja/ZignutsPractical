@@ -34,7 +34,6 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    console.log(updatedInvitation.length);
     if (counter >= updatedInvitation.length) {
       return;
     }
